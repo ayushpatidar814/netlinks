@@ -8,7 +8,6 @@ const poppins = localFont({
   variable: "--font-poppins",
   weight: "100 900",
 });
-console.log("ayush")
 
 export default function Home() {
   return (
@@ -26,8 +25,8 @@ export default function Home() {
           <Link href="/github"><button className='bg-purple-500 rounded-lg shadow-lg p-3 py-1 font-bold text-white'>GitHub</button></Link>
         </div>
         </div>
-        <div className=" flex justify-start relative">
-          <Image className="mix-blend-darken" alt="an Image of a vector" src={"/vector.jpg"} fill={true}    />
+        <div className=" flex justify-start relative w-full h-90">
+          <Image className="mix-blend-darken" alt="an Image of a vector" src={"/vector.jpg"} width={600} height={400} priority />
         </div>
 
       </section>
