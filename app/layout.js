@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "NetLinks - Your trusted URL shortener",
-  description: "Netlinks helps you shorten your Urls easily",
+  title: "ShortLinks - Your trusted URL shortener",
+  description: "Shortlinks helps you shorten your Urls easily",
 };
 
 export default function RootLayout({ children }) {
