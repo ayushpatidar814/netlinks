@@ -2,7 +2,7 @@ import { NextResponse as Response } from "next/server"
 import clientPromise from "@/lib/mongodb"
 
 export async function POST(request){
-
+  try{
   const body = await request.json()
   const client = await clientPromise;
   const db = client.db("netlinks")
@@ -19,4 +19,11 @@ export async function POST(request){
   })
 
   return Response.json({success: true, error: false, message: "URL Generated Successfully"})
+} catch(err){
+  console.error("API /generate error:", err)
+    return Response.json(
+      { success: false, error: true, message: err.message },
+      { status: 500 }
+    )
+}
 }
